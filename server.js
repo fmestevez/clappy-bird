@@ -1,0 +1,15 @@
+var util = require("util");
+var express = require('express');
+var app = express();
+
+var bodyParser = require('body-parser');
+
+// set the static files location /public/img will be /img for users
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+var server = app.listen(process.env.PORT || 8080);
