@@ -1,4 +1,3 @@
-var util = require("util");
 var express = require('express');
 var app = express();
 
@@ -12,4 +11,4 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-var server = app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080);

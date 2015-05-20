@@ -99,6 +99,7 @@ var mainState = {
     update: function() {
 
         if(meter) {
+            console.log(meter.volume);
             if(meter.volume > 0.2)
                 this.jump();
         }
